@@ -19,16 +19,16 @@ namespace dotnet_rpg.Services.CharacterService
       return serviceResponse;
     }
 
-    public async Task<ServiceResponse<List<Character>>> GetAllCharacters()
+    public async Task<ServiceResponse<List<GetCharacterDto>>> GetAllCharacters()
     {
-      var serviceResponse = new ServiceResponse<List<Character>>(); 
+      var serviceResponse = new ServiceResponse<List<GetCharacterDto>>(); 
       serviceResponse.Data = characters;
       return serviceResponse;
     }
 
-    public async Task<ServiceResponse<Character>> GetCharacterById(int id)
+    public async Task<ServiceResponse<GetCharacterDto>> GetCharacterById(int id)
     {
-      var serviceResponse = new ServiceResponse<Character>();
+      var serviceResponse = new ServiceResponse<GetCharacterDto>();
       serviceResponse.Data = characters.FirstOrDefault(c => c.Id == id);
       return serviceResponse;
     }
