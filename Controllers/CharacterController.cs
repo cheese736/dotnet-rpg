@@ -18,7 +18,7 @@ namespace dotnet_rpg.Controllers
 		{
 			_characterService = characterService;
 		}
-
+		[AllowAnonymous]
 		[HttpGet("GetAll")]
 		public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> Get()
 		{
