@@ -5,12 +5,11 @@ using System.Threading.Tasks;
 
 namespace dotnet_rpg.Models
 {
-	public class User
+	public class Skill
 	{
 		public int Id { get; set; }
-		public string Username { get; set; } = string.Empty;
-		public byte[] PasswordHash { get; set; } = new byte[0];
-		public byte[] PasswordSalt { get; set; } = new byte[0];
+		public string Name { get; set; } = string.Empty;
+		public int Damage { get; set; }
 		public List<Character>? Characters { get; set; }
 	}
 }
